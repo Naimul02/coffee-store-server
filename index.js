@@ -39,6 +39,7 @@ async function run() {
       res.send(result);
     });
     app.post("/coffee", async (req, res) => {
+      // new coffee
       const newCoffee = req.body;
       console.log(newCoffee);
       const result = await coffeeCollection.insertOne(newCoffee);
